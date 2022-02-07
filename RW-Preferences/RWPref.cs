@@ -8,8 +8,12 @@ using System.Xml.XPath;
 
 namespace RW_Preferences
 {
-    class RWPref
+    public class RWPref
     {
+
+        private RWPref _rwpref;
+        public RWPref rwpref => this._rwpref ?? (this._rwpref = new RWPref());
+
         /// <summary>
         /// Retourne le chemin et le fichier des préférences de paramétrage (url + login + WebAuthToken ...)
         /// </summary>
